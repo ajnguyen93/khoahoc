@@ -61,7 +61,7 @@ export function ChatWidget() {
   return (
     <div className="fixed bottom-5 right-5 z-50">
       {open && (
-        <div className="mb-3 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border bg-card shadow-xl shadow-black/10 ring-1 ring-foreground/6.5 sm:w-96">
+        <div className="mb-3 flex h-[28rem] w-80 flex-col overflow-hidden rounded-none border bg-card sm:w-96">
           <div className="flex items-center justify-between border-b bg-primary px-4 py-3 text-primary-foreground">
             <div>
               <p className="text-sm font-medium">Hỏi đáp nhanh</p>
@@ -70,7 +70,7 @@ export function ChatWidget() {
             <button
               onClick={() => setOpen(false)}
               aria-label="Đóng khung chat"
-              className="flex size-7 items-center justify-center rounded-full hover:bg-white/10"
+              className="flex size-7 items-center justify-center rounded-none hover:bg-white/10"
             >
               <X className="size-4" />
             </button>
@@ -84,10 +84,10 @@ export function ChatWidget() {
               >
                 <div
                   className={cn(
-                    "max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2 text-sm",
+                    "max-w-[85%] whitespace-pre-wrap rounded-none px-3.5 py-2 text-sm",
                     m.from === "user"
-                      ? "rounded-br-sm bg-primary text-primary-foreground"
-                      : "rounded-bl-sm bg-muted text-foreground",
+                      ? "rounded-none bg-primary text-primary-foreground"
+                      : "rounded-none bg-muted text-foreground",
                   )}
                 >
                   {m.text}
@@ -96,7 +96,7 @@ export function ChatWidget() {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="rounded-2xl rounded-bl-sm bg-muted px-3.5 py-2 text-sm text-muted-foreground">
+                <div className="rounded-none bg-muted px-3.5 py-2 text-sm text-muted-foreground">
                   Đang trả lời...
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function ChatWidget() {
                 <button
                   key={q}
                   onClick={() => sendMessage(q)}
-                  className="rounded-full border px-2.5 py-1 text-xs text-muted-foreground duration-150 hover:border-primary hover:text-primary"
+                  className="rounded-none border px-2.5 py-1 text-xs text-muted-foreground duration-150 hover:border-primary hover:text-primary"
                 >
                   {q}
                 </button>
@@ -127,7 +127,7 @@ export function ChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Nhập câu hỏi của bạn..."
-                className="h-9 flex-1 rounded-full border border-input bg-transparent px-3.5 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+                className="h-9 flex-1 rounded-none border border-input bg-transparent px-3.5 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
               />
               <Button type="submit" size="icon" className="shrink-0" aria-label="Gửi">
                 <Send className="size-4" />
@@ -140,7 +140,7 @@ export function ChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Đóng khung chat" : "Mở khung chat hỏi đáp"}
-        className="ml-auto flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-black/20 duration-150 hover:brightness-105 active:scale-95"
+        className="ml-auto flex size-14 items-center justify-center rounded-none bg-primary text-primary-foreground duration-150 hover:brightness-105 active:scale-95"
       >
         {open ? <X className="size-6" /> : <MessageCircle className="size-6" />}
       </button>

@@ -32,7 +32,7 @@ export function StatusBadge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ring-1 ring-inset",
+        "inline-flex items-center gap-1.5 rounded-none px-2.5 py-1 text-xs font-medium ring-1 ring-inset",
         toneClasses[tone],
         className,
       )}
@@ -44,7 +44,7 @@ export function StatusBadge({
 }
 
 export function StatusDot({ tone, className }: { tone: Tone; className?: string }) {
-  return <span className={cn("inline-block size-2.5 rounded-full", dotToneClasses[tone], className)} />;
+  return <span className={cn("inline-block size-2.5 rounded-none", dotToneClasses[tone], className)} />;
 }
 
 export const docStatusMeta: Record<

@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="pt-44">
       <div className="mx-auto max-w-7xl px-6">
-        <h1 className="max-w-2xl text-balance text-5xl font-medium tracking-tight md:text-6xl lg:mt-16">
+        <h1 className="max-w-2xl text-balance text-5xl font-normal tracking-tight md:text-6xl lg:mt-16">
           DuHoc24 xin chào!
         </h1>
 
@@ -29,7 +29,7 @@ export function Hero() {
           />
         </div>
 
-        <div className="relative mt-10 overflow-hidden rounded-3xl shadow-2xl shadow-black/10 ring-1 ring-foreground/6.5 sm:mt-14">
+        <div className="relative mt-10 overflow-hidden rounded-none border sm:mt-14">
           <Image
             src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2400&auto=format&fit=crop"
             alt="Sinh viên tung mũ tốt nghiệp sau khi hoàn tất chương trình du học"

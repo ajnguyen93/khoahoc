@@ -29,7 +29,7 @@ export function ExtractedInfo({
       <CardContent>
         <dl className="grid gap-4 sm:grid-cols-2">
           {fields.map((field) => (
-            <div key={field.label} className="rounded-lg bg-muted/40 p-3">
+            <div key={field.label} className="rounded-none bg-muted/40 p-3">
               <dt className="text-xs text-muted-foreground">{field.label}</dt>
               <dd className="mt-1 text-base font-medium">{field.value}</dd>
             </div>

@@ -96,7 +96,7 @@ export function QuoteForm() {
                     <label
                       key={level.value}
                       className={cn(
-                        "flex cursor-pointer items-center justify-center gap-2 rounded-lg border px-2 py-2 text-sm duration-150",
+                        "flex cursor-pointer items-center justify-center gap-2 rounded-none border px-2 py-2 text-sm duration-150",
                         degreeLevel === level.value
                           ? "border-primary bg-accent text-accent-foreground"
                           : "border-input text-muted-foreground hover:bg-muted/50",
@@ -121,14 +121,14 @@ export function QuoteForm() {
                       key={pkg.id}
                       onClick={() => setSelectedPackage(pkg.id)}
                       className={cn(
-                        "rounded-xl border p-5 text-left duration-150",
+                        "rounded-none border p-5 text-left duration-150",
                         active ? "border-primary ring-2 ring-primary/30" : "border-border hover:border-primary/50",
                       )}
                     >
                       <div className="flex items-center justify-between">
                         <span className="font-medium">{pkg.name}</span>
                         {active && (
-                          <span className="flex size-5 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                          <span className="flex size-5 items-center justify-center rounded-none bg-primary text-primary-foreground">
                             <Check className="size-3.5" />
                           </span>
                         )}
@@ -181,7 +181,7 @@ export function QuoteForm() {
             </Button>
 
             {submitted && (
-              <div className="space-y-3 rounded-xl border border-primary/20 bg-accent p-5">
+              <div className="space-y-3 rounded-none border border-primary/20 bg-accent p-5">
                 <p className="text-sm text-muted-foreground">Mức giá dự kiến cho bạn</p>
                 <p className="text-3xl font-semibold tracking-tight text-accent-foreground">
                   {formatVnd(chosenPackage.price)}

@@ -34,7 +34,7 @@ export function Highlights() {
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           {highlights.map(({ icon: Icon, title, description, image }) => (
             <div key={title}>
-              <div className="relative overflow-hidden rounded-2xl shadow-sm shadow-black/5 ring-1 ring-foreground/6.5">
+              <div className="relative overflow-hidden rounded-none border">
                 <Image
                   src={image}
                   alt={title}
@@ -42,11 +42,11 @@ export function Highlights() {
                   height={600}
                   className="aspect-4/3 w-full object-cover"
                 />
-                <span className="absolute bottom-3 left-3 flex size-10 items-center justify-center rounded-xl bg-background shadow-sm ring-1 ring-foreground/10">
+                <span className="absolute bottom-3 left-3 flex size-10 items-center justify-center rounded-none border bg-background">
                   <Icon className="size-5" />
                 </span>
               </div>
-              <h3 className="mt-4 text-lg font-medium">{title}</h3>
+              <h3 className="mt-4 text-lg font-normal">{title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{description}</p>
             </div>
           ))}

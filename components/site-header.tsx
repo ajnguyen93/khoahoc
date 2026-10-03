@@ -48,7 +48,7 @@ export function SiteHeader() {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? "Đóng menu" : "Mở menu"}
-            className="relative z-20 flex size-9 items-center justify-center rounded-md text-foreground lg:hidden"
+            className="relative z-20 flex size-9 items-center justify-center rounded-none text-foreground lg:hidden"
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -64,7 +64,7 @@ export function SiteHeader() {
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
                     className={cn(
-                      "block rounded-md px-2 py-2.5 text-base duration-150",
+                      "block rounded-none px-2 py-2.5 text-base duration-150",
                       active ? "bg-accent font-medium text-accent-foreground" : "text-muted-foreground hover:bg-accent",
                     )}
                   >

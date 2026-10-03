@@ -17,14 +17,14 @@ export function SchoolMatch({ matches }: { matches: { school: School; passed: bo
           <div
             key={school.id}
             className={cn(
-              "flex items-center justify-between gap-4 rounded-xl border p-4",
+              "flex items-center justify-between gap-4 rounded-none border p-4",
               passed ? "border-green-200 bg-green-50" : "border-border bg-muted/30",
             )}
           >
             <div className="flex items-center gap-3">
               <span
                 className={cn(
-                  "flex size-8 shrink-0 items-center justify-center rounded-full",
+                  "flex size-8 shrink-0 items-center justify-center rounded-none",
                   passed ? "bg-green-500 text-white" : "bg-gray-200 text-gray-500",
                 )}
               >
